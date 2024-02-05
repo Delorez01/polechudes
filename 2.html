@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>5 задание - Поле чудес</title>
+	<style type="text/css">
+		/* Главный див */
+		.container {
+			width: 600px;
+		}
+		/* класс для правильной буквы 1 */
+		.letter1 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 2 */
+		.letter2 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 3 */
+		.letter3 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 4 */
+		.letter4 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 5 */
+		.letter5 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 6 */
+		.letter6 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* авт. отступы */
+		.mx-auto {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		/* DISPLAY FLEX */
+		.d-flex {
+			display: flex;
+		}
+		/* ШРИФТ Arial */
+		.ff-arial {
+			font-family: Arial;
+		}
+		/* фон светло-серый, почти белый */
+		.bg-light {
+			background-color: #f8f9fa;
+		}
+		/* фон желтый */
+		.bg-warning {
+			background-color: #ffc107;
+		}
+		/* ведущий Якубович */
+		.yakubovich {
+			background-image: url(1.png);
+			background-size: 100% 100%;
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			left: 0px;
+			top: 400px;
+		}
+		.win {
+			display: none;
+		}
+	</style>
+</head>
+<body class="ff-arial">
+	<!-- Вопрос -->
+	<div class="bg-warning container mx-auto">
+		Этот струнный инструмент используют во многих стилях и направлениях музыки. Значительный вклад в музыкальную индустрию этот инструмент внес к середине 20 века.
+	</div>
+	<!-- Главный див -->
+	<div class="o container mx-auto d-flex bg-light">
+		<div class="letter1">
+			<h1>Г</h1>
+		</div>
+		<div class="letter2">
+			<h1>И</h1>
+		</div>
+		<div class="letter3">
+			<h1>Т</h1>
+		</div>
+		<div class="letter4">
+			<h1>А</h1>
+		</div>
+		<div class="letter5">
+			<h1>Р</h1>
+		</div>
+		<div class="letter6">
+			<h1>А</h1>
+		</div>
+	</div>
+	<div class="win">
+		
+	</div>
+	<!-- Добавьте классы для букв сами -->
+	<span class="c4">A</span>
+	<span class="f">Б</span>
+	<span class="f1">В</span>
+	<span class="c1">Г</span>
+	<span class="f2">Д</span>		
+	<span class="f3">Е</span>	
+	<span class="f4">Ё</span>
+	<span class="f5">Ж</span>
+	<span class="f6">З</span>
+	<span class="c2">И</span>
+	<span class="f7">Й</span>
+	<span class="f8">К</span>
+	<span class="f9">Л</span>
+	<span class="f10">М</span>
+	<span class="f11">Н</span>
+	<span class="f12">О</span>
+	<span class="f13">П</span>
+	<span class="c5">Р</span>
+	<span class="f14">С</span>
+	<span class="c3">Т</span>
+	<span class="f15">У</span>
+	<span class="f16">Ф</span>
+	<span class="f17">Х</span>
+	<span class="f18">Ц</span>
+	<span class="f19">Ч</span>
+	<span class="f20">Ш</span>
+	<span class="f21">Щ</span>
+	<span class="f22">Ъ</span>
+	<span class="f23">Ы</span>
+	<span class="f24">Ь</span>
+	<span class="f25">Э</span>
+	<span class="f26">Ю</span>
+	<span class="f27">Я</span>
+	<!-- ведущий -->
+	<div class="yakubovich">
+	</div>
+	<script type="text/javascript">
+		/* Создай игру "Поле чудес".
+		1. Когда кликаешь на правильную букву алфавита, то открывается буква в слове.
+		2. Когда кликаешь на неправильную букву алфавита, то выходит всплывающее окно 'Неверно!'.
+		Вначале сделай, так чтобы работали клики на правильные буквы. Потом сделай, так чтобы работали клики на 1-2 неправильные буквы. На все 33 буквы алфавита, можно не делать. */
+		let num = 0
+
+		let l1 = document.querySelector(".letter1")
+		let c1 = document.querySelector(".c1")
+
+
+
+		c1.onclick = function() {
+			num  = num + 1
+			if(num>=5){
+				alert('Ты выиграл!')
+			}
+			l1.style.backgroundColor = "yellow"
+		}
+
+		let l2 = document.querySelector(".letter2")
+		let c2 = document.querySelector(".c2")
+
+		c2.onclick = function() {
+			num = num + 1
+			if(num>=5){
+				alert('Ты выиграл!')
+			}
+			l2.style.backgroundColor = "yellow"
+		}
+
+
+		let l3 = document.querySelector(".letter3")
+		let c3 = document.querySelector(".c3")
+
+		c3.onclick = function() {
+			num = num + 1
+			if(num>=5){
+				alert('Ты выиграл!')
+			}
+			l3.style.backgroundColor = "yellow"
+		}
+
+
+		let l4 = document.querySelector(".letter4")
+		let l6 = document.querySelector(".letter6")
+		let c4 = document.querySelector(".c4")
+
+		c4.onclick = function() {
+			num = num + 1
+			if(num>=5){
+				alert('Ты выиграл!')
+			}
+			l4.style.backgroundColor = "yellow"
+			l6.style.backgroundColor = "yellow"
+		}
+
+
+		let l5 = document.querySelector(".letter5")
+		let c5 = document.querySelector(".c5")
+
+		c5.onclick = function() {
+			num = num + 1
+			if(num>=5){
+				alert('Ты выиграл!')
+			}
+			l5.style.backgroundColor = "yellow"
+		}
+
+
+		let f = document.querySelector(".f")
+		f.onclick = function () {
+			alert("Неверно!")
+		}
+		let f1 = document.querySelector(".f1")
+		f1.onclick = function () {
+			alert("Неверно!")
+		}
+		let f2 = document.querySelector(".f2")
+		f2.onclick = function () {
+			alert("Неверно!")
+		}
+		let f3 = document.querySelector(".f3")
+		f3.onclick = function () {
+			alert("Неверно!")
+		}
+		let f4 = document.querySelector(".f4")
+		f4.onclick = function () {
+			alert("Неверно!")
+		}
+		let f5 = document.querySelector(".f5")
+		f5.onclick = function () {
+			alert("Неверно!")
+		}
+		let f6 = document.querySelector(".f6")
+		f6.onclick = function () {
+			alert("Неверно!")
+		}
+		let f7 = document.querySelector(".f7")
+		f7.onclick = function () {
+			alert("Неверно!")
+		}
+		let f8 = document.querySelector(".f8")
+		f8.onclick = function () {
+			alert("Неверно!")
+		}
+		let f9 = document.querySelector(".f9")
+		f9.onclick = function () {
+			alert("Неверно!")
+		}
+		let f10 = document.querySelector(".f10")
+		f10.onclick = function () {
+			alert("Неверно!")
+		}
+		let f11 = document.querySelector(".f11")
+		f11.onclick = function () {
+			alert("Неверно!")
+		}
+		let f12 = document.querySelector(".f12")
+		f12.onclick = function () {
+			alert("Неверно!")
+		}
+		let f13 = document.querySelector(".f13")
+		f13.onclick = function () {
+			alert("Неверно!")
+		}
+		let f14 = document.querySelector(".f14")
+		f14.onclick = function () {
+			alert("Неверно!")
+		}
+		let f15 = document.querySelector(".f15")
+		f15.onclick = function () {
+			alert("Неверно!")
+		}
+		let f16 = document.querySelector(".f16")
+		f16.onclick = function () {
+			alert("Неверно!")
+		}
+		let f17 = document.querySelector(".f17")
+		f17.onclick = function () {
+			alert("Неверно!")
+		}
+		let f18 = document.querySelector(".f18")
+		f18.onclick = function () {
+			alert("Неверно!")
+		}
+		let f19 = document.querySelector(".f19")
+		f19.onclick = function () {
+			alert("Неверно!")
+		}
+		let f20 = document.querySelector(".f20")
+		f20.onclick = function () {
+			alert("Неверно!")
+		}
+		let f21 = document.querySelector(".f21")
+		f21.onclick = function () {
+			alert("Неверно!")
+		}
+		let f22 = document.querySelector(".f22")
+		f22.onclick = function () {
+			alert("Неверно!")
+		}
+		let f23 = document.querySelector(".f23")
+		f23.onclick = function () {
+			alert("Неверно!")
+		}
+		let f24 = document.querySelector(".f24")
+		f24.onclick = function () {
+			alert("Неверно!")
+		}
+		let f25 = document.querySelector(".f25")
+		f25.onclick = function () {
+			alert("Неверно!")
+		}
+		let f26 = document.querySelector(".f26")
+		f26.onclick = function () {
+			alert("Неверно!")
+		}
+
+	</script>
+</body>
+</html>
